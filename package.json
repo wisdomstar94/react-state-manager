@@ -1,27 +1,38 @@
 {
-  "name": "react-state-manager",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@wisdomstar94/react-state-manager",
+  "version": "0.0.1-test.1",
+  "license": "MIT",
+  "private": false,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3330",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pack:build": "node ./build.esbuild.js",
+    "pack:build:tsc": "tsc --project ./tsconfig.package.json"
   },
-  "dependencies": {
+  "repository": "https://github.com/wisdomstar94/react-state-manager",
+  "main": "index.ts",
+  "devDependencies": {
+    "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.1"
-  },
-  "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "esbuild": "^0.19.5",
+    "esbuild-css-modules-plugin": "^3.0.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.1",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.1"
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
   }
 }
